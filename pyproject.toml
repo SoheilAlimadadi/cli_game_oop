@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "dnd-oop-v1"
+version = "1.0.0"
+description = "Dungeon and Dragons"
+authors = ["SoheilAlimadadi <soheilblizzard@gmail.com>"]
+readme = "README.md"
+packages = [{include = "dnd_oop_v1"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+sqlalchemy = "^2.0.0"
+alembic = "^1.9.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
