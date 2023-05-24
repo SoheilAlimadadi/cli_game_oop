@@ -1,4 +1,9 @@
-# Dungeon and Dragons OOP - v.0
+# Dungeon and Dragons OOP - v.1.0.0
+
+1: poetry install
+2: alembic upgrade head
+3: alembic stamp head
+4 : python3 run.py (have fun!, you might also need to have special fonts installed for the emojis to work)
 
 ## Abstraction
 
