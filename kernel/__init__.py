@@ -1,1 +1,1 @@
-from .application import main
+from .application import run_pregame

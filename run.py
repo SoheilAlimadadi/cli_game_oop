@@ -1,5 +1,5 @@
-from kernel import main
+from kernel import run_pregame
 
 
 if __name__ == '__main__':
-    main()
+    run_pregame()

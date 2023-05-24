@@ -4,8 +4,10 @@ from sqlalchemy.orm import (
     Session
 )
 
+from painless.designs.singleton import Singleton
 
-class SqlAlchemy:
+
+class SqlAlchemy(metaclass=Singleton):
     def __init__(self):
         self.engine = self.create_engine()
         self.Base = declarative_base()

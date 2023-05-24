@@ -1,0 +1,62 @@
+[loggers]
+keys = root, auth, game
+
+
+[handlers]
+keys = rootHandler, authHandler, gameHandler
+
+
+[formatters]
+keys = rootFormatter, authFormatter, gameFormatter
+
+
+[logger_root]
+level = INFO
+handlers = rootHandler
+
+
+[logger_auth]
+level = INFO
+handlers = authHandler
+qualname = auth
+propagate = 0
+
+
+[logger_game]
+level = INFO
+handlers = gameHandler
+qualname = game
+propagate = 0
+
+
+[handler_rootHandler]
+class = FileHandler
+level = INFO
+formatter = rootFormatter
+args = ('logs/root.log',)
+
+
+[handler_authHandler]
+class = FileHandler
+level = INFO
+formatter = authFormatter
+args = ('logs/auth.log',)
+
+
+[handler_gameHandler]
+class = FileHandler
+level = INFO
+formatter = gameFormatter
+args = ('logs/game.log',)
+
+
+[formatter_rootFormatter]
+format = %(levelname)s :: %(message)s :: %(asctime)s
+
+
+[formatter_authFormatter]
+format = %(asctime)s :: %(message)s
+
+
+[formatter_gameFormatter]
+format = %(asctime)s :: %(message)s

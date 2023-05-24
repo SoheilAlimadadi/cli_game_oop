@@ -1,4 +1,3 @@
-from sqlalchemy import sql
 from sqlalchemy import (
     Column,
     Integer,
@@ -11,6 +10,7 @@ from database import db
 
 class UserModel(db.Base):
     __tablename__ = 'user_account'
+    database = db
 
     def __init__(self, username, password):
         self.username = username
@@ -33,7 +33,8 @@ class UserModel(db.Base):
     )
 
     role = Column(
-        String(10)
+        String(10),
+        default='user'
     )
 
     won = Column(
@@ -50,3 +51,9 @@ class UserModel(db.Base):
         Float,
         default=0.0
     )
+
+    def __str__(self):
+        return self.username
+
+    def __repr__(self):
+        return self.username
